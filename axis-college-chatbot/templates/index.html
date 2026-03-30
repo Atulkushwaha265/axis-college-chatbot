@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Colleges AI Assistant - Kanpur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="{{ url_for('static', filename='images/axis-logo.png') }}" 
+                     alt="Axis Colleges Logo" 
+                     class="logo-img me-2">
+                <div>
+                    <h4 class="mb-0 fw-bold text-primary">Axis Colleges</h4>
+                    <small class="text-muted">Kanpur</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#facilities">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#placements">Placements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/events">
+                            <i class="fas fa-calendar-alt me-1"></i> Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">
+                            <i class="fas fa-user-shield me-1"></i> Admin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <img src="{{ url_for('static', filename='images/axis_campus_hero.png') }}" 
+             alt="Axis College Campus" 
+             class="hero-image">
+        <div class="hero-content">
+            <div class="container text-center">
+                <h1 class="hero-title animate-fade-in">Welcome to Axis College AI Assistant</h1>
+                <p class="hero-subtitle animate-fade-in-delay">Ask Anything About Courses, Fees, Admissions & More</p>
+                <div class="hero-buttons animate-fade-in-delay-2">
+                    <a href="#chat" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-comments me-2"></i>Start Chat
+                    </a>
+                    <a href="#about" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Campus Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="{{ url_for('static', filename='images/campus_about.png') }}" 
+                         alt="Axis College Campus" 
+                         class="img-fluid rounded shadow about-img animate-fade-in">
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2 class="section-title animate-fade-in">About Axis College</h2>
+                        <p class="lead animate-fade-in-delay">
+                            Axis Colleges, Kanpur is a premier educational institution dedicated to excellence in engineering, management, and technology education.
+                        </p>
+                        <p class="animate-fade-in-delay">
+                            Established with a vision to nurture future leaders, we offer state-of-the-art infrastructure, experienced faculty, and a comprehensive learning environment that fosters innovation and creativity.
+                        </p>
+                        <div class="row mt-4">
+                            <div class="col-6 animate-fade-in-delay-2">
+                                <div class="feature-box">
+                                    <i class="fas fa-graduation-cap text-primary fa-2x mb-2"></i>
+                                    <h5>Quality Education</h5>
+                                    <p>Industry-relevant curriculum with practical exposure</p>
+                                </div>
+                            </div>
+                            <div class="col-6 animate-fade-in-delay-2">
+                                <div class="feature-box">
+                                    <i class="fas fa-users text-success fa-2x mb-2"></i>
+                                    <h5>Expert Faculty</h5>
+                                    <p>Experienced professors and industry experts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title animate-fade-in">World-Class Facilities</h2>
+                <p class="lead animate-fade-in-delay">Experience excellence with our state-of-the-art infrastructure</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="facility-card animate-fade-in">
+                        <img src="{{ url_for('static', filename='images/hostel.jpg') }}" 
+                             alt="Hostel Facilities" 
+                             class="img-fluid facility-img">
+                        <div class="facility-overlay">
+                            <h4>Modern Hostels</h4>
+                            <p>Comfortable and secure accommodation with all modern amenities</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="facility-card animate-fade-in-delay">
+                        <img src="{{ url_for('static', filename='images/labs.jpg') }}" 
+                             alt="Computer Labs" 
+                             class="img-fluid facility-img">
+                        <div class="facility-overlay">
+                            <h4>Advanced Labs</h4>
+                            <p>Well-equipped computer labs with latest software and hardware</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="facility-card animate-fade-in-delay-2">
+                        <img src="{{ url_for('static', filename='images/library.jpg') }}" 
+                             alt="Library" 
+                             class="img-fluid facility-img">
+                        <div class="facility-overlay">
+                            <h4>Digital Library</h4>
+                            <p>Extensive collection of books, journals, and e-resources</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Section -->
+    <section id="placements" class="py-5 bg-primary text-white placement-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="placement-content">
+                        <h2 class="section-title animate-fade-in">Excellent Placement Record</h2>
+                        <p class="lead animate-fade-in-delay">
+                            Our students are placed in top companies with attractive salary packages
+                        </p>
+                        <div class="placement-stats animate-fade-in-delay-2">
+                            <div class="row">
+                                <div class="col-4 text-center">
+                                    <h3 class="stat-number">500+</h3>
+                                    <p>Students Placed</p>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h3 class="stat-number">25L</h3>
+                                    <p>Highest Package</p>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h3 class="stat-number">8.5L</h3>
+                                    <p>Average Package</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 animate-fade-in-delay-2">
+                            <a href="#chat" class="btn btn-light btn-lg">
+                                <i class="fas fa-comments me-2"></i>Know More About Placements
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{{ url_for('static', filename='images/placements.jpg') }}" 
+                         alt="Placement Success" 
+                         class="img-fluid rounded shadow placement-img animate-fade-in">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chat" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title animate-fade-in">AI Assistant Chat</h2>
+                <p class="lead animate-fade-in-delay">Get instant answers to all your questions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Chat Content -->
+    <main class="flex-grow-1">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Sidebar -->
+                <div class="col-lg-3 col-md-4 bg-light border-end p-0">
+                    <div class="sidebar-content p-3">
+                        <h5 class="mb-3">
+                            <i class="fas fa-robot me-2 text-primary"></i>Quick Help
+                        </h5>
+                        
+                        <!-- Quick Action Buttons -->
+                        <div class="quick-actions mb-4">
+                            <h6 class="text-muted small mb-3">Popular Topics</h6>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm quick-action" data-query="Tell me about courses">
+                                    <i class="fas fa-book me-2"></i>Courses
+                                </button>
+                                <button class="btn btn-outline-success btn-sm quick-action" data-query="What are the fees?">
+                                    <i class="fas fa-rupee-sign me-2"></i>Fees
+                                </button>
+                                <button class="btn btn-outline-info btn-sm quick-action" data-query="How to get admission?">
+                                    <i class="fas fa-user-plus me-2"></i>Admission
+                                </button>
+                                <button class="btn btn-outline-warning btn-sm quick-action" data-query="Tell me about placements">
+                                    <i class="fas fa-briefcase me-2"></i>Placements
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm quick-action" data-query="What facilities are available?">
+                                    <i class="fas fa-building me-2"></i>Facilities
+                                </button>
+                                <button class="btn btn-outline-danger btn-sm quick-action" data-query="Tell me about scholarships">
+                                    <i class="fas fa-award me-2"></i>Scholarships
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- College Info -->
+                        <div class="college-info">
+                            <h6 class="text-muted small mb-3">Contact Info</h6>
+                            <div class="small">
+                                <p class="mb-2">
+                                    <i class="fas fa-phone me-2 text-primary"></i>
+                                    0512-2580001
+                                </p>
+                                <p class="mb-2">
+                                    <i class="fas fa-envelope me-2 text-primary"></i>
+                                    info@axiscolleges.edu.in
+                                </p>
+                                <p class="mb-2">
+                                    <i class="fas fa-clock me-2 text-primary"></i>
+                                    Mon-Sat: 9AM-5PM
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                    Kanpur-Lucknow Highway
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="stats mt-4">
+                            <h6 class="text-muted small mb-3">Campus Highlights</h6>
+                            <div class="row g-2 text-center">
+                                <div class="col-6">
+                                    <div class="bg-primary text-white rounded p-2">
+                                        <div class="fw-bold">500+</div>
+                                        <div class="small">Students Placed</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-success text-white rounded p-2">
+                                        <div class="fw-bold">50+</div>
+                                        <div class="small">Courses</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-warning text-white rounded p-2">
+                                        <div class="fw-bold">25L</div>
+                                        <div class="small">Highest Package</div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-info text-white rounded p-2">
+                                        <div class="fw-bold">10+</div>
+                                        <div class="small">Facilities</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Area -->
+                <div class="col-lg-9 col-md-8 p-0">
+                    <div class="chat-container h-100 d-flex flex-column">
+                        <!-- Chat Header -->
+                        <div class="chat-header bg-white border-bottom p-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="bot-avatar me-3">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0">Axis AI Assistant</h5>
+                                        <p class="mb-0 small text-success">
+                                            <i class="fas fa-circle me-1"></i>Online
+                                        </p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-secondary btn-sm" id="clearChat">
+                                    <i class="fas fa-trash me-1"></i>Clear
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages -->
+                        <div class="chat-messages flex-grow-1 overflow-auto p-3" id="chatMessages">
+                            <!-- Welcome Message -->
+                            <div class="message bot-message mb-3">
+                                <div class="d-flex">
+                                    <div class="bot-avatar me-2">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="message-bubble">
+                                            <p class="mb-0">👋 Welcome to Axis Colleges AI Assistant!</p>
+                                            <p class="mb-0">I'm here to help you with information about our courses, fees, admission process, placements, facilities, and more.</p>
+                                            <p class="mb-0">Feel free to ask me anything about Axis Colleges, Kanpur.</p>
+                                        </div>
+                                        <div class="message-time small text-muted mt-1">
+                                            <i class="far fa-clock me-1"></i>Just now
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Typing Indicator -->
+                        <div class="typing-indicator d-none p-3" id="typingIndicator">
+                            <div class="d-flex">
+                                <div class="bot-avatar me-2">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Input -->
+                        <div class="chat-input bg-white border-top p-3">
+                            <form id="chatForm">
+                                <div class="input-group">
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="messageInput" 
+                                           placeholder="Type your message here..." 
+                                           autocomplete="off"
+                                           required>
+                                    <button class="btn btn-primary" type="submit" id="sendButton">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="small text-muted mt-2 text-center">
+                                <i class="fas fa-lock me-1"></i>Your conversation is secure and private
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0 small">© 2024 Axis Colleges, Kanpur. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white small me-3">
+                        <i class="fab fa-facebook me-1"></i>Facebook
+                    </a>
+                    <a href="#" class="text-white small me-3">
+                        <i class="fab fa-twitter me-1"></i>Twitter
+                    </a>
+                    <a href="#" class="text-white small me-3">
+                        <i class="fab fa-linkedin me-1"></i>LinkedIn
+                    </a>
+                    <a href="#" class="text-white small">
+                        <i class="fab fa-instagram me-1"></i>Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
